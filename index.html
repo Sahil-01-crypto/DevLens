@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/variables.css">
+    <link rel="stylesheet" href="./css/components.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+
+
+
+</head>
+
+
+<body>
+    <div class="app">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <div class="logo">
+                <h2>DevLens</h2>
+                <span>GitHub Dashboard</span>
+            </div>
+
+            <nav class="sidebar-nav">
+
+                <a href="#" class="nav-item active">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="#" class="nav-item">
+                    <i class="fa-solid fa-star"></i>
+                    <span>Favorites</span>
+                </a>
+
+                <a href="#" class="nav-item">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    <span>Recent Searches</span>
+                </a>
+
+                <a href="#" class="nav-item">
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Settings</span>
+                </a>
+
+            </nav>
+
+        </aside>
+
+        <!-- Main -->
+        <main class="main-content">
+
+            <!-- Header -->
+
+            <header class="header">
+
+                <div class="search-box">
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        <input type="text" id="search-input" placeholder="Search GitHub Username...">
+
+                    </div>
+
+                    <button id="search-btn">
+                        Search
+                    </button>
+
+                </div>
+
+            </header>
+
+            <section class="profile-card">
+
+
+                <div class="profile-image">
+
+                    <img src="https://avatars.githubusercontent.com/u/583231?v=4" alt="Profile Avatar" id="avatar">
+
+                </div>
+
+                <div class="profile-info">
+
+                    <div class="profile-header">
+
+                        <div>
+
+                            <h2 id="name">
+                                The Octocat
+                            </h2>
+
+                            <p id="username">
+                                @octocat
+                            </p>
+
+                        </div>
+
+                        <a href="#" class="profile-btn" id="profile-link">
+                            Visit Profile
+                        </a>
+
+                    </div>
+
+                    <p id="bio">
+                        GitHub's mascot and sample profile.
+                    </p>
+
+                </div>
+
+            </section>
+
+            <section class="stats-grid">
+
+    <article class="stat-card">
+
+        <h3>Followers</h3>
+
+        <p id="followers">
+            0
+        </p>
+
+    </article>
+
+    <article class="stat-card">
+
+        <h3>Following</h3>
+
+        <p id="following">
+            0
+        </p>
+
+    </article>
+
+    <article class="stat-card">
+
+        <h3>Repositories</h3>
+
+        <p id="repositories">
+            0
+        </p>
+
+    </article>
+
+</section>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>
