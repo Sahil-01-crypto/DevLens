@@ -346,3 +346,177 @@ body{
     color:var(--accent-primary);
 
 }
+
+
+
+/* ===========================
+        TOAST CONTAINER
+=========================== */
+
+.toast-container{
+
+    position: fixed;
+
+    top: 2rem;
+    right: 2rem;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 1rem;
+
+    z-index: 9999;
+}
+
+
+/* ===========================
+          TOAST CARD
+=========================== */
+
+.toast{
+
+    width: 340px;
+
+    padding: 1rem 1.2rem;
+
+    border-radius: 18px;
+
+    background: rgba(34, 37, 47, 0.75);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.35),
+        inset 0 1px rgba(255,255,255,.05);
+
+    color: white;
+
+    animation: slideIn .35s ease;
+
+    transition: .3s;
+}
+
+.toast:hover{
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 18px 40px rgba(0,0,0,.45);
+
+}
+
+
+/* ===========================
+          HEADING
+=========================== */
+
+.toast h3{
+
+    font-size: 1rem;
+
+    font-weight: 700;
+
+    margin-bottom: .35rem;
+
+}
+
+
+.toast p{
+
+    font-size: .9rem;
+
+    color: rgba(255,255,255,.75);
+
+    line-height: 1.5;
+
+}
+
+
+/* ===========================
+          TYPES
+=========================== */
+
+.toast.success{
+
+    border-left:5px solid #22c55e;
+
+}
+
+.toast.error{
+
+    border-left:5px solid #ef4444;
+
+}
+
+.toast.warning{
+
+    border-left:5px solid #f59e0b;
+
+}
+
+.toast.info{
+
+    border-left:5px solid #3b82f6;
+
+}
+
+
+/* ===========================
+        ANIMATIONS
+=========================== */
+
+@keyframes slideIn{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateX(120px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateX(0);
+
+    }
+
+}
+
+
+.fade-out{
+
+    animation:
+    fadeOut .35s forwards;
+
+}
+
+
+@keyframes fadeOut{
+
+    from{
+
+        opacity:1;
+
+        transform:
+        translateX(0);
+
+    }
+
+    to{
+
+        opacity:0;
+
+        transform:
+        translateX(120px);
+
+    }
+
+}
