@@ -11,11 +11,27 @@ body{
     135deg,
     var(--bg-primary),
     var(--bg-secondary)
+
+    
 );
     color: var(--text-primary);
     font-family: var(--font-family);
     min-height: 100vh;
     overflow-x: hidden;
+}
+
+body{
+
+    min-height:100vh;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0f172a,
+            #1e293b,
+            #111827
+        );
+
 }
 
 /* ===========================
@@ -732,6 +748,157 @@ body{
     transform:
     translateY(-8px)
     scale(1.02);
+
+}
+
+/* ===========================
+   Recent Searches Section
+=========================== */
+
+.recent-searches{
+    width: 100%;
+    padding: 2rem;
+}
+
+.recent-searches h2{
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+}
+
+
+/* ===========================
+   Container
+=========================== */
+
+.recentcontainer{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+/* ===========================
+   Glass Card
+=========================== */
+
+.recent-card{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.2rem;
+
+    padding: 1rem 1.5rem;
+
+    background: rgba(255,255,255,0.08);
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 32px rgba(0,0,0,.25);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        background .25s ease;
+}
+
+
+/* ===========================
+   Hover
+=========================== */
+
+.recent-card:hover{
+
+    transform: translateY(-5px);
+
+    background: rgba(255,255,255,0.12);
+
+    box-shadow:
+        0 12px 35px rgba(0,0,0,.35);
+
+}
+
+
+/* ===========================
+   Avatar
+=========================== */
+
+.recent-card img{
+
+    width: 65px;
+    height: 65px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border:2px solid rgba(255,255,255,.2);
+
+}
+
+
+/* ===========================
+   Content
+=========================== */
+
+.recent-content{
+
+    flex:1;
+
+}
+
+.recent-content h3{
+
+    color:white;
+    font-size:1.1rem;
+    margin-bottom:.3rem;
+
+}
+
+.recent-content p{
+
+    color:#cbd5e1;
+    font-size:.95rem;
+
+}
+
+
+/* ===========================
+   Button
+=========================== */
+
+.recent-card a{
+
+    text-decoration:none;
+
+    color:white;
+
+    padding:.8rem 1.3rem;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.1);
+
+    border:1px solid rgba(255,255,255,.18);
+
+    transition:.25s;
+
+}
+
+
+.recent-card a:hover{
+
+    background:rgba(255,255,255,.22);
+
+    transform:scale(1.05);
 
 }
 

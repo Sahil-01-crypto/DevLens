@@ -1,5 +1,7 @@
 async function getRepository(username) {
     try {
+
+        console.log("Inside getRepository");
         const response  = await fetch(`https://api.github.com/users/${username}/repos`)
         const Repodata =  await response.json();
         console.log( response.status);
@@ -11,9 +13,10 @@ async function getRepository(username) {
       
         showRepository( Repodata);
     }
-    catch(error){
-        console.log(error)
-    }
+    catch (error) {
+   console.log(error);
+
+}
 
     
 }

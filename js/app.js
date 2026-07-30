@@ -11,7 +11,11 @@ const ownerBio = document.getElementById("bio");
 const ownerFollower = document.getElementById("followers")
 const ownerFollowing = document.getElementById("following")
 const ownerRepo = document.getElementById("repositories")
- const viewAllBtn = document . getElementById("viewallrepo");
+const viewAllBtn = document.getElementById("viewallrepo");
+const recentBtn = document.getElementById("recentNav");
+
+
+
 
 
 
@@ -48,7 +52,7 @@ async function getDetails(username) {
         console.log(response.status);
         const data = await response.json();
 
-        console.log( data )
+        console.log(data)
 
         if (!response.ok) {
             showToast({
@@ -73,6 +77,8 @@ async function getDetails(username) {
 
     }
     catch (error) {
+
+         console.error(error);
         showToast({
             message: "Network Error",
             description: "Please check your internet connection.",
@@ -95,28 +101,40 @@ function showDetails(data) {
     ownerFollower.textContent = data.followers;
     ownerFollowing.textContent = data.following;
     ownerRepo.textContent = data.public_repos;
+
+    let detail = {
+        username: data.login,
+        name: data.name,
+        avatar: data.avatar_url,
+        profileUrl: data.html_url,
+    }
+    addToLocalStorage(detail);
+
+    
 }
 
 
 function showRepository(repositories) {
 
-   
-    
 
-    
+
+
+
 
     const repoGrid = document.querySelector(".repo-grid");
+
+    console.log("Inside showRepository");
     repoGrid.innerHTML = "";
 
     const firstSixRepositories = repositories.slice(0, 6);
 
     firstSixRepositories.forEach((repo) => {
 
-     
+
         const article = document.createElement("article");
         article.classList.add("repo-card");
 
-        
+
         const repoTop = document.createElement("div");
         repoTop.classList.add("repo-top");
 
@@ -128,7 +146,7 @@ function showRepository(repositories) {
 
         repoTop.append(repoName, language);
 
-      
+
         const description = document.createElement("p");
         description.textContent =
             repo.description ?? "No description available.";
@@ -148,14 +166,14 @@ function showRepository(repositories) {
         repoStats.append(stars, forks);
 
         const visitRepo = document.createElement("a");
-   
+
         visitRepo.href = repo.html_url;
         visitRepo.target = "_blank";
         visitRepo.textContent = "Visit ->";
 
         repoBottom.append(repoStats, visitRepo);
 
-        
+
         article.append(repoTop, description, repoBottom);
 
         repoGrid.append(article);
@@ -163,6 +181,12 @@ function showRepository(repositories) {
     });
 
 }
+
+
+recentBtn.addEventListener("click", function () {
+    renderRecent();
+})
+
 
 
 
