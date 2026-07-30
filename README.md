@@ -61,23 +61,7 @@ DevLens/
 
 
 
-## 🚀 Getting Started
 
-Clone the repository
-
-```bash
-git clone https://github.com/your-username/devlens.git
-```
-
-Open the project
-
-```bash
-cd devlens
-```
-
-Launch `index.html` in your browser.
-
----
 
 ## 🎯 Upcoming Features
 
@@ -106,6 +90,3 @@ This project is licensed under the MIT License.
 
 ## 👨‍💻 Author 
 **Sahil**
-**Sneha Singh**
-
-Built with ❤️ while learning JavaScript and frontend development.
